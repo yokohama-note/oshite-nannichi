@@ -92,3 +92,9 @@ nav button[aria-current=page]{color:var(--accent);outline:0}.nav-icon{width:26px
 button,.button,input,select,textarea,label,legend,h2,h3,p{font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif}
 button,.button{font-weight:600;letter-spacing:.025em}
 h2,h3{font-weight:650;letter-spacing:.045em}
+
+/* 設定画面 */
+#settings-form,#settings-form fieldset{min-width:0}
+#settings-form input,#settings-form select,#set-start{width:100%;min-width:0;max-width:100%;display:block}
+.settings-photo-preview{display:grid;place-items:center;margin:8px 0 14px}
+.settings-photo-preview .avatar{width:104px;height:104px;border:2px solid color-mix(in srgb,var(--accent) 45%,#ddd);box-shadow:0 0 0 4px #fff,0 0 0 6px color-mix(in srgb,var(--accent) 22%,#eee),0 8px 20px #4a28371a}
