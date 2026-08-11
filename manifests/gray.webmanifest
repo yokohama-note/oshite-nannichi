@@ -1,0 +1,25 @@
+{
+  "name": "推して何日？",
+  "short_name": "推して何日？",
+  "description": "推し始めた日数と予定を端末内だけで管理",
+  "lang": "ja",
+  "start_url": "../index.html?icon=gray",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#eef0f2",
+  "theme_color": "#9ca3af",
+  "icons": [
+    {
+      "src": "../icons/gray-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../icons/gray-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

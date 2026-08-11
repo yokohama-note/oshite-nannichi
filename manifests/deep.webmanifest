@@ -1,0 +1,25 @@
+{
+  "name": "推して何日？",
+  "short_name": "推して何日？",
+  "description": "推し始めた日数と予定を端末内だけで管理",
+  "lang": "ja",
+  "start_url": "../index.html?icon=deep",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#e9ddff",
+  "theme_color": "#6d28d9",
+  "icons": [
+    {
+      "src": "../icons/deep-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../icons/deep-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

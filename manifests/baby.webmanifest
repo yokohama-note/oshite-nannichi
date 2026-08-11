@@ -1,0 +1,25 @@
+{
+  "name": "推して何日？",
+  "short_name": "推して何日？",
+  "description": "推し始めた日数と予定を端末内だけで管理",
+  "lang": "ja",
+  "start_url": "../index.html?icon=baby",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#fff0f7",
+  "theme_color": "#f9a8d4",
+  "icons": [
+    {
+      "src": "../icons/baby-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../icons/baby-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

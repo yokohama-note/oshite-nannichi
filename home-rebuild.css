@@ -1,0 +1,94 @@
+/* ホーム画面再構築版：完成見本の画面内だけを基準にする */
+html,body{min-height:100%;background:#ededf0;font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif;font-feature-settings:"palt" 1;font-kerning:normal}
+.app{width:100%;max-width:390px;min-height:100dvh;margin:0 auto;background:#fff;box-shadow:0 0 34px #1d17200d}
+header{height:54px;padding:0 22px;justify-content:flex-start;background:#fff9fc;border-bottom:1px solid color-mix(in srgb,var(--accent) 25%,#eee);box-shadow:none}
+header h1{margin:0;color:color-mix(in srgb,var(--accent) 78%,#613a4a);font-family:"Noto Sans JP","Hiragino Sans",sans-serif;font-size:1.12rem;font-weight:650;letter-spacing:.11em}
+header h1::before{display:none}
+header h1::after{content:'♡';position:absolute;right:21px;top:50%;translate:0 -50%;color:color-mix(in srgb,var(--accent) 68%,#fff);font-size:1.55rem;font-weight:400}
+main{min-height:calc(100dvh - 54px);padding:7px 17px calc(76px + env(safe-area-inset-bottom));background:linear-gradient(180deg,color-mix(in srgb,var(--soft) 18%,#fff),#fff 24%)}
+main:focus{outline:none}
+
+#home{position:relative;min-height:calc(100dvh - 138px)}
+#home .hero{position:relative;margin:0;padding:7px 0 2px;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none;text-align:center}
+#home .hero::before,#home .hero::after{position:absolute;top:42px;color:color-mix(in srgb,var(--accent) 66%,#fff);font-size:.88rem;line-height:1}
+#home .hero::before{content:'♥';left:29px}#home .hero::after{content:'♥';right:29px}
+#home .hero .avatar.big{width:76px;height:76px;display:block;margin:0 auto;object-fit:cover;border:2px solid color-mix(in srgb,var(--accent) 48%,#fff);border-radius:50%;background:var(--soft);box-shadow:0 0 0 4px #fff,0 0 0 6px color-mix(in srgb,var(--accent) 22%,#eee),0 8px 18px #5930441b}
+#home #theme-mark{display:none}
+#home #day-message{display:flex;flex-direction:column;align-items:center;margin:.82rem 0 0;line-height:1.12}
+#home .day-intro{position:relative;width:285px;max-width:90%;padding:0 0 .72rem;color:#4c3d44;font-size:.96rem;font-weight:560;letter-spacing:.035em;line-height:1.48;overflow-wrap:anywhere}
+#home .day-intro::before{content:'';position:absolute;left:0;right:0;bottom:0;border-bottom:1.5px dotted color-mix(in srgb,var(--accent) 45%,transparent)}
+#home .day-intro::after{content:'♥';position:absolute;left:50%;bottom:-.48rem;translate:-50% 0;padding:0 .44rem;background:#fff;color:color-mix(in srgb,var(--accent) 64%,#fff);font-size:.72rem}
+#home .day-today{margin:.7rem 0 .13rem;color:#493b42;font-size:1.14rem;font-weight:620;letter-spacing:.13em}
+#home .day-count{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:84px}
+#home .day-number{position:relative;color:var(--accent);font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;font-size:5.15rem;font-weight:420;letter-spacing:-.065em;line-height:.82;font-variant-numeric:lining-nums proportional-nums;filter:drop-shadow(0 7px 11px color-mix(in srgb,var(--accent) 20%,transparent))}
+#home .day-number[data-digits="3"]{font-size:4.95rem}#home .day-number[data-digits="4"]{font-size:4rem}
+#home .day-number::before,#home .day-number::after{content:'';position:absolute;top:48%;width:10px;height:1.5px;background:var(--accent);box-shadow:0 -6px 0 var(--accent),0 6px 0 var(--accent)}
+#home .day-number::before{left:-1.35rem;rotate:72deg}#home .day-number::after{right:-1.35rem;rotate:-72deg}
+#home .day-unit{padding:0 0 .36rem .52rem;color:#44383f;font-size:1.52rem;font-weight:620;letter-spacing:.05em;line-height:1;white-space:nowrap}
+#home #start-label{display:none}
+
+#home #celebrations,#home #notices{display:grid;gap:9px;margin-top:4px;padding:0 5px}
+#home #celebrations:empty,#home #notices:empty{display:none}
+#home .notice,#home .celebrate,#home .daily-message,#home .home-action-card{position:relative;width:100%;min-height:68px;margin:0;display:flex;align-items:center;justify-content:flex-start;padding:10px 31px 10px 64px;overflow:hidden;border:1px solid color-mix(in srgb,var(--accent) 25%,#e4dce0);border-radius:11px;background:linear-gradient(110deg,#fff 6%,color-mix(in srgb,var(--soft) 43%,#fff));box-shadow:0 7px 17px #582b3e12;color:#493d43;font-size:.96rem;font-weight:560;letter-spacing:.025em;line-height:1.5;text-align:left}
+#home .notice::after,#home .celebrate::after,#home .daily-message::after,#home .home-action-card::after{content:'';position:absolute;right:0;top:0;width:0;height:0;border-top:18px solid color-mix(in srgb,var(--accent) 72%,#fff);border-left:18px solid transparent}
+#home .notice::before,#home .celebrate::before,#home .daily-message::before{position:absolute;left:15px;width:31px;height:31px;display:grid;place-items:center;border:1.5px solid var(--accent);border-radius:6px;background:#fff;color:var(--accent);font-size:1rem}
+#home .celebrate::before,#home .anniversary-notice::before{content:'♡'}
+#home .event-notice::before{content:'♥';border-radius:3px;rotate:-7deg}
+#home .daily-message::before{content:'♡'}
+#home .home-action-card{border-color:color-mix(in srgb,var(--accent) 25%,#e4dce0);cursor:pointer}
+#home .ticket-line-icon{position:absolute;left:13px;width:36px;height:29px;rotate:-7deg;color:var(--accent)}
+#home .ticket-line-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+nav{left:50%;bottom:0;width:min(390px,100%);min-height:67px;transform:translateX(-50%);grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:5px 7px calc(4px + env(safe-area-inset-bottom));border-top:1px solid color-mix(in srgb,var(--accent) 24%,#e5dfe2);border-radius:0;background:#fff;box-shadow:none}
+nav button{min-width:0;min-height:56px;padding:3px 1px;gap:2px;border:0;border-radius:0;background:transparent!important;box-shadow:none!important;color:#645e61;transform:none!important}
+nav button[aria-current=page]{color:var(--accent);outline:0}.nav-icon{width:26px;height:26px;flex-basis:26px}.nav-label{font-size:.72rem!important;font-weight:560;letter-spacing:.02em}
+
+/* かっこいい系は同じ情報配置で、素材だけを四つ角の星とネオンへ変える */
+.cool.app,.cool main{background:#071126;color:#f3f6ff}.cool header{background:#09142d;border-color:#283a61}.cool header h1{color:#dce6ff}.cool header h1::after{content:'✧';color:var(--accent);text-shadow:0 0 8px var(--accent)}
+.cool #home .hero::before,.cool #home .hero::after{content:'✧';color:var(--accent);text-shadow:0 0 9px var(--accent)}
+.cool #home .hero .avatar.big{border-color:var(--accent);box-shadow:0 0 0 3px #071126,0 0 0 5px var(--accent),0 0 20px color-mix(in srgb,var(--accent) 62%,transparent)}
+.cool #home .day-intro,.cool #home .day-today{color:#f3f6ff}.cool #home .day-intro::before{border-bottom-style:solid;border-color:color-mix(in srgb,var(--accent) 72%,transparent)}.cool #home .day-intro::after{content:'✧';background:#071126;color:var(--accent);text-shadow:0 0 8px var(--accent)}
+.cool #home .day-number{color:#f9fcff;text-shadow:0 0 4px #fff,0 0 14px var(--accent),0 0 29px var(--accent);filter:none}.cool #home .day-number::before,.cool #home .day-number::after{content:'✧';width:auto;height:auto;background:none;box-shadow:none;top:34%;color:var(--accent);font-size:1rem;text-shadow:0 0 8px var(--accent);rotate:0deg}.cool #home .day-number::before{left:-1.45rem}.cool #home .day-number::after{right:-1.45rem}.cool #home .day-unit{color:#f5f7ff}
+.cool #home .notice,.cool #home .celebrate,.cool #home .daily-message,.cool #home .home-action-card{border-color:color-mix(in srgb,var(--accent) 80%,#91a7ff);border-radius:3px;background:#0e1936;color:#f4f7ff;box-shadow:0 0 12px color-mix(in srgb,var(--accent) 16%,transparent)}
+.cool #home .notice::before,.cool #home .celebrate::before,.cool #home .daily-message::before{content:'✧';border-color:var(--accent);border-radius:3px;background:transparent;color:var(--accent);box-shadow:0 0 8px color-mix(in srgb,var(--accent) 38%,transparent)}
+.cool #home .notice::after,.cool #home .celebrate::after,.cool #home .daily-message::after,.cool #home .home-action-card::after{width:9px;height:9px;border:0;border-top:1px solid var(--accent);border-right:1px solid var(--accent)}
+.cool nav{background:#09142d;border-color:#27385e}.cool nav button{color:#cbd3e6}.cool nav button[aria-current=page]{color:var(--accent)}
+
+/* 白い推し色は、白基調のままグレーの輪郭で読めるようにする */
+.app[data-theme="cute"][data-color="white"] header{background:#faf8f9;border-color:#d8cfd4}
+.app[data-theme="cute"][data-color="white"] header h1{color:#75666e}
+.app[data-theme="cute"][data-color="white"] header h1::after{color:#a28f99}
+.app[data-theme="cute"][data-color="white"] #home .day-number{color:#83727b;filter:drop-shadow(0 6px 10px #76636d22)}
+.app[data-theme="cute"][data-color="white"] #home .day-number::before,.app[data-theme="cute"][data-color="white"] #home .day-number::after{background:#a28f99;box-shadow:0 -6px 0 #a28f99,0 6px 0 #a28f99}
+.app[data-theme="cute"][data-color="white"] #home .notice,.app[data-theme="cute"][data-color="white"] #home .celebrate,.app[data-theme="cute"][data-color="white"] #home .daily-message,.app[data-theme="cute"][data-color="white"] #home .home-action-card{border-color:#d8cfd4;background:linear-gradient(110deg,#fff,#f7f3f5);box-shadow:0 7px 17px #6e596511}
+.app[data-theme="cute"][data-color="white"] nav button[aria-current=page]{color:#7b6872}
+
+/* 放射線は数字ではなく「数字＋日目！」全体の外側に置く */
+#home .day-number::before,#home .day-number::after{display:none}
+#home .day-count::before,#home .day-count::after{content:'';position:absolute;top:48%;width:10px;height:1.5px;background:var(--accent);box-shadow:0 -6px 0 var(--accent),0 6px 0 var(--accent);pointer-events:none}
+#home .day-count::before{left:-1.35rem;rotate:72deg}
+#home .day-count::after{right:-1.35rem;rotate:-72deg}
+.cool #home .day-count::before,.cool #home .day-count::after{content:'✧';top:36%;width:auto;height:auto;background:none;box-shadow:none;color:var(--accent);font-size:1rem;text-shadow:0 0 8px var(--accent);rotate:0deg}
+.cool #home .day-count::before{left:-1.45rem}.cool #home .day-count::after{right:-1.45rem}
+.app[data-theme="cute"][data-color="white"] #home .day-count::before,.app[data-theme="cute"][data-color="white"] #home .day-count::after{background:#a28f99;box-shadow:0 -6px 0 #a28f99,0 6px 0 #a28f99}
+
+@media(max-height:720px){#home .hero{padding-top:3px}#home .hero .avatar.big{width:66px;height:66px}#home .day-intro{padding-bottom:.58rem}#home .day-today{margin-top:.58rem}#home .day-count{min-height:74px}#home .day-number{font-size:4.55rem}#home .day-number[data-digits="3"]{font-size:4.4rem}#home .notice,#home .celebrate,#home .daily-message,#home .home-action-card{min-height:57px}}
+@media(max-width:350px){main{padding-inline:10px}#home .day-number{font-size:4.35rem}#home .day-number[data-digits="3"]{font-size:4.18rem}#home .day-unit{font-size:1.3rem}#home .notice,#home .celebrate,#home .daily-message,#home .home-action-card{font-size:.9rem}}
+
+/* スマートフォンで読みやすい文字サイズ */
+@media(max-width:520px){
+  body{font-size:17px}
+  h2{font-size:1.42rem}
+  .small,.safe-note{font-size:.98rem;line-height:1.65}
+  label,legend{font-size:1.02rem}
+  input,select,textarea,button,.button{font-size:1rem}
+  .result{font-size:1.12rem;line-height:1.6}
+  .calendar-head h2{font-size:1.38rem}
+  .week b{font-size:.88rem}
+  .day{font-size:.94rem}
+  .day.today::before,.day.has::after{font-size:.6rem}
+}
+
+button,.button,input,select,textarea,label,legend,h2,h3,p{font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif}
+button,.button{font-weight:600;letter-spacing:.025em}
+h2,h3{font-weight:650;letter-spacing:.045em}
