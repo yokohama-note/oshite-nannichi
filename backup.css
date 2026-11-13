@@ -1,0 +1,8 @@
+.backup-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 12px 0;
+}
+.backup-actions button { min-height: 52px; }
+@media (max-width: 380px) { .backup-actions { grid-template-columns: 1fr; } }
